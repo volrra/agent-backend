@@ -63,11 +63,8 @@ app = Flask(__name__)
 #     res_data["reply"]="reply"
 #     return res_data
 
-@app.route("/")
+@app.route("/",methods=["GET"])
 def test():
     return "hello world"
 
 
-
-if __name__=="__main__":
-    app.run(host="0.0.0.0")

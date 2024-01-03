@@ -1,7 +1,6 @@
 import json
 from flask import Flask, request
 # import mapper
-
 app = Flask(__name__)
 headers = {
         "Content-Type": "application/json"

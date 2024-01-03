@@ -66,7 +66,7 @@ def chat_controller():
     res_data["reply"]="reply"
     return res_data
 
-@app.route("/",methods=["GET"])
+@app.route("/")
 def test():
     return "hello world"
 

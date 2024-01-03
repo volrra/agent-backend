@@ -49,6 +49,7 @@ def register_controller():
     # response = requests.post("http://192.168.3.113:8185/wg/route/v2/recommend", headers=headers,
     #                          data=res_data, )
 
+
 @app.route("/chat",methods=["POST"])
 def chat_controller():
     req_body=request.get_json()
@@ -65,7 +66,7 @@ def chat_controller():
     res_data["reply"]="reply"
     return res_data
 
-@app.route("/test",methods=["GET"]
+@app.route("/",methods=["GET"])
 def test():
     return "hello world"
 

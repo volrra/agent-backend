@@ -1,6 +1,6 @@
 import sqlite3
 
-# con=sqlite3.connect('./database/test.db')
+# con=sqlite3.connect('../database/test.db')
 # cur=con.cursor()
 # data="1,'tom','123456'"
 # # cur.execute("INSERT INTO user VALUES (%s) "%data)

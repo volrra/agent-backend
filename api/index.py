@@ -2,9 +2,7 @@ import json
 from flask import Flask, request
 # import mapper
 app = Flask(__name__)
-headers = {
-        "Content-Type": "application/json"
-    }
+
 # @app.route("/user/login", methods=["POST"])
 # def login_controller():
 #     req_body=request.get_json()

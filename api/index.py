@@ -37,7 +37,7 @@ def register_controller():
             res_data["password"] = password
             res_data["state"]=True
 
-    return res_data
+    return json.dumps(res_data)
     # response = requests.post("http://192.168.3.113:8185/wg/route/v2/recommend", headers=headers,
     #                          data=res_data, )
 

@@ -21,7 +21,7 @@ import sqlite3
 
 class Mapper:
     def __init__(self):
-        self.con=sqlite3.connect('database.db')
+        self.con=sqlite3.connect(':memory:')
         self.cur=self.con.cursor()
         self.sql_init()
 

@@ -3,24 +3,24 @@ from flask import Flask, request
 import mapper
 app = Flask(__name__)
 
-# @app.route("/user/login", methods=["GET"])
-# def login_controller():
-#
-#     name=request.args.get('user_name')
-#     password=req_body('password')
-#     dao=mapper.Mapper()
-#     info_list=dao.get_user(name,password)
-#     res_data=dict()
-#     res_data["state"]=True
-#     if info_list==[]:
-#         res_data["state"]=False
-#     else:
-#         res_data["user_id"]=info_list[0][0]
-#
-#     return res_data
-#     # response = requests.post("http://192.168.3.113:8185/wg/route/v2/recommend", headers=headers,
-#     #                                    data=res_data, )
-@app.route("/register/",methods=["GET"])
+@app.route("/login", methods=["GET"])
+def login_controller():
+
+    name=request.args.get('user_name')
+    password=req_body('password')
+    dao=mapper.Mapper()
+    info_list=dao.get_user(name,password)
+    res_data=dict()
+    res_data["state"]=True
+    if info_list==[]:
+        res_data["state"]=False
+    else:
+        res_data["user_id"]=info_list[0][0]
+
+    return res_data
+    # response = requests.post("http://192.168.3.113:8185/wg/route/v2/recommend", headers=headers,
+    #                                    data=res_data, )
+@app.route("/register",methods=["GET"])
 def register_controller():
     name=request.args.get('user_name')
     password=request.args.get('password')

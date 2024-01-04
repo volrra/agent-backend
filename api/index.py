@@ -20,7 +20,7 @@ def login_controller():
     return res_data
     # response = requests.post("http://192.168.3.113:8185/wg/route/v2/recommend", headers=headers,
     #                                    data=res_data, )
-@app.route("/user/register",methods=["GET"])
+@app.route("/",methods=["GET"])
 def register_controller():
     name=request.args.get('user_name')
     password=request.args.get('password')
@@ -55,8 +55,8 @@ def chat_controller():
     res_data["reply"]="reply"
     return res_data
 
-@app.route("/",methods=["GET"])
-def test():
-    return "hello world"
+# @app.route("/",methods=["GET"])
+# def test():
+#     return "hello world"
 
 

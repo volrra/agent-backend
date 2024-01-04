@@ -7,7 +7,7 @@ app = Flask(__name__)
 def login_controller():
 
     name=request.args.get('user_name')
-    password=req_body('password')
+    password=request.args.get('password')
     dao=mapper.Mapper()
     info_list=dao.get_user(name,password)
     res_data=dict()

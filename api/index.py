@@ -20,7 +20,7 @@ def login_controller():
     return res_data
     # response = requests.post("http://192.168.3.113:8185/wg/route/v2/recommend", headers=headers,
     #                                    data=res_data, )
-@app.route("/r",methods=["GET"])
+@app.route("/api/r/",methods=["GET"])
 def register_controller():
     name=request.args.get('user_name')
     password=request.args.get('password')
